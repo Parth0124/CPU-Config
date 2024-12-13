@@ -11,9 +11,9 @@ const App = () => {
   return (
     <Router>
       <div>
-        <SystemInfo />
         <Routes>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/system" element={<SystemInfo />} />
           <Route path="/gpu" element={<GPUInfo />} />
           <Route path="/cpu" element={<CPUInfo />} />
           <Route path="/ram" element={<RAMInfo />} />
