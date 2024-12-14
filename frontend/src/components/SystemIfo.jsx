@@ -10,10 +10,10 @@ const SystemInfo = () => {
       .get("http://127.0.0.1:8000/system")
       .then((response) => {
         setSystemInfo({
-          time: response.data.time,
-          battery: response.data.battery,
-          cpuTemperature: response.data.cpu_temperature,
-          pythonVersion: response.data.python_version,
+          time: response.data.time || "N/A",
+          battery: response.data.battery || "N/A",
+          cpuTemperature: response.data.cpu_temperature || "N/A",
+          pythonVersion: response.data.python_version || "N/A",
         });
       })
       .catch((error) => {
@@ -71,7 +71,7 @@ const SystemInfo = () => {
         </div>
         <Link
           to="/"
-          className="inline-block bg-cyan-500 text-white py-2 pt-2 mt-10 px-4 rounded-lg shadow hover:bg-cyan-600 focus:outline-none flex justify-center align-middle transition-all ease-out duration-300"
+          className="inline-block bg-cyan-500 text-white py-2 mt-10 px-4 rounded-lg shadow hover:bg-cyan-600 focus:outline-none flex justify-center align-middle transition-all ease-out duration-300"
         >
           Home
         </Link>

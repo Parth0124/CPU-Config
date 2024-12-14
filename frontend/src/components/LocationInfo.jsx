@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {Link} from 'react-router-dom'
 import axios from "axios";
 
 const LocationInfo = () => {
@@ -20,6 +21,12 @@ const LocationInfo = () => {
         <p className="text-xl text-gray-800">
           <strong>Location:</strong> {location}
         </p>
+        <Link
+          to="/"
+          className="inline-block bg-cyan-500 text-white py-2 px-4 rounded-lg shadow hover:bg-cyan-600 focus:outline-none flex justify-center align-middle transition-all ease-out duration-300"
+        >
+          Home
+        </Link>
       </div>
     </div>
   );
