@@ -7,7 +7,7 @@ const LocationInfo = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/location")
+      .get(`${import.meta.env.VITE_SERVER_URL}/location`)
       .then((response) => setLocation(response.data.city))
       .catch(() => setLocation("Error fetching location data"));
   }, []);

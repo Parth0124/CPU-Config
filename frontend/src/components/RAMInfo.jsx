@@ -7,7 +7,7 @@ const RAMInfo = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/system")
+      .get(`${import.meta.env.VITE_SERVER_URL}/system`)
       .then((response) => setRamUsage(response.data.ram_usage))
       .catch(() => setRamUsage(0));
   }, []);

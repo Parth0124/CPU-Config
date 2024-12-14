@@ -7,7 +7,7 @@ const GPUInfo = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/gpu")
+      .get(`${import.meta.env.VITE_SERVER_URL}/gpu`)
       .then((response) => setGpuUsage(response.data.gpu_usage))
       .catch(() => setGpuUsage("Error fetching GPU data"));
   }, []);

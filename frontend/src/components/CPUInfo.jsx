@@ -7,7 +7,7 @@ const CPUInfo = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/system")
+      .get(`${import.meta.env.VITE_SERVER_URL}/system`)
       .then((response) => setCpuUsage(response.data.cpu_usage))
       .catch(() => setCpuUsage("Error fetching CPU data"));
   }, []);
